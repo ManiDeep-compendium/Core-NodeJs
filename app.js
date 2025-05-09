@@ -16,15 +16,27 @@
 
 const premiumCars = require('./PremiumCars');
 
-let defaultPremiumCarName = premiumCars.getCarName();
+let cars = new premiumCars('Austin Martin');
 
-console.log(defaultPremiumCarName);
+console.log(cars.getCarName());
 
-premiumCars.setCarName('Volvo');
+cars.setCarName('Volvoo');
 
-console.log( premiumCars.getCarName());
+console.log(cars.getCarName());
 
 
 const premiumCarsTwo = require('./PremiumCars');
+let carTwo = new premiumCarsTwo('Austin Martin');
 
-console.log(premiumCarsTwo.getCarName());
+console.log(carTwo.getCarName());
+
+
+const utilities = require('./utility');
+
+const {removeDupsinArray,sortArray} = utilities;
+
+console.log(removeDupsinArray([1,2,1,3,4,5,4,6,7,6,8]));
+
+console.log(sortArray([77,88,11,22,44,55,66],'dsc'));
+console.log(sortArray([77,88,11,22,44,55,66],'asc'));
+

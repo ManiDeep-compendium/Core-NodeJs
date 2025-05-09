@@ -13,4 +13,4 @@ class PremiumCars {
   }
 }
 
-module.exports = new PremiumCars('Austin Martin');
+module.exports = PremiumCars
